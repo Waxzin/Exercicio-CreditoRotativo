@@ -23,7 +23,7 @@ valorPagamentoMinimo = valorTotalFatura * Convert.ToDecimal(percetualPagamentoMi
 valorNaopago = valorTotalFatura - valorPagamentoMinimo;
 valorDojuros = valorNaopago * Convert.ToDecimal(taxaJurosMensais);
 valorIOFMes = valorNaopago * Convert.ToDecimal(TaxaIOfMes);
-valorIOFDiario = valorNaopago * Convert.ToDecimal(TaxaIOfDia);
+valorIOFDiario = valorNaopago * Convert.ToDecimal(TaxaIOfDia * 30);
 
 valorProximaFatura = valorNaopago + valorDojuros + valorIOFMes + valorIOFDiario;
 custoCreditoRotativo = valorProximaFatura - valorNaopago;
